@@ -19,15 +19,15 @@ spec:
         version: v1
     spec:
       containers:
-        - name: app
-          image: registry.cn-hangzhou.aliyuncs.com/k8s_water/app:latest
-          imagePullPolicy: IfNotPresent
-          resources:
-            limits:
-              cpu: "0.2"
-              memory: "200Mi"
-          ports:
-            - containerPort: 9010
+      - name: app
+        image: registry.cn-hangzhou.aliyuncs.com/k8s_water/app:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: "0.2"
+            memory: "200Mi"
+        ports:
+        - containerPort: 9010
         livenessProbe:
           initialDelaySeconds: 30
           httpGet:
