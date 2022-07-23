@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: water
+  name: app
+  labels:
+    app: app
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: app
+        version: v1
+    spec:
+      containers:
+        - name: app
+          image: registry.cn-hangzhou.aliyuncs.com/k8s_water/app:latest
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: "0.2"
+              memory: "200Mi"
+          ports:
+            - containerPort: 9010
+        livenessProbe:
+          initialDelaySeconds: 30
+          httpGet:
+            path: /actuator/health/liveness
+            port: 9010
+          periodSeconds: 10
+          failureThredshold: 1
+        readinessProbe:
+          initialDelaySeconds: 30
+          httpGet:
+            path: /actuator/health/readiness
+            port: 9010
+          periodSeconds: 10
+          failureThredshold: 1

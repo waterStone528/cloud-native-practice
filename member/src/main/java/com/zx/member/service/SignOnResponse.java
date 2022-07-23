@@ -18,7 +18,7 @@ public  final class SignOnResponse extends
     userId_ = 0;
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -61,14 +61,14 @@ public  final class SignOnResponse extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.zx.member.service.Member.internal_static_member_SignOnResponse_descriptor;
+    return Member.internal_static_member_SignOnResponse_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.zx.member.service.Member.internal_static_member_SignOnResponse_fieldAccessorTable
+    return Member.internal_static_member_SignOnResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.zx.member.service.SignOnResponse.class, com.zx.member.service.SignOnResponse.Builder.class);
+            SignOnResponse.class, Builder.class);
   }
 
   public static final int USERID_FIELD_NUMBER = 1;
@@ -111,15 +111,15 @@ public  final class SignOnResponse extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.zx.member.service.SignOnResponse)) {
+    if (!(obj instanceof SignOnResponse)) {
       return super.equals(obj);
     }
-    com.zx.member.service.SignOnResponse other = (com.zx.member.service.SignOnResponse) obj;
+    SignOnResponse other = (SignOnResponse) obj;
 
     boolean result = true;
     result = result && (getUserId()
@@ -127,7 +127,7 @@ public  final class SignOnResponse extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -141,69 +141,69 @@ public  final class SignOnResponse extends
     return hash;
   }
 
-  public static com.zx.member.service.SignOnResponse parseFrom(
+  public static SignOnResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(
+  public static SignOnResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(
+  public static SignOnResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(
+  public static SignOnResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(byte[] data)
+  public static SignOnResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(
+  public static SignOnResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(java.io.InputStream input)
+  public static SignOnResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(
+  public static SignOnResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnResponse parseDelimitedFrom(java.io.InputStream input)
+  public static SignOnResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.zx.member.service.SignOnResponse parseDelimitedFrom(
+  public static SignOnResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(
+  public static SignOnResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.zx.member.service.SignOnResponse parseFrom(
+  public static SignOnResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -215,7 +215,7 @@ public  final class SignOnResponse extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.zx.member.service.SignOnResponse prototype) {
+  public static Builder newBuilder(SignOnResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -223,7 +223,7 @@ public  final class SignOnResponse extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
       com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
@@ -235,17 +235,17 @@ public  final class SignOnResponse extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:member.SignOnResponse)
-      com.zx.member.service.SignOnResponseOrBuilder {
+      SignOnResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zx.member.service.Member.internal_static_member_SignOnResponse_descriptor;
+      return Member.internal_static_member_SignOnResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zx.member.service.Member.internal_static_member_SignOnResponse_fieldAccessorTable
+      return Member.internal_static_member_SignOnResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.zx.member.service.SignOnResponse.class, com.zx.member.service.SignOnResponse.Builder.class);
+              SignOnResponse.class, Builder.class);
     }
 
     // Construct using com.zx.member.service.SignOnResponse.newBuilder()
@@ -272,23 +272,23 @@ public  final class SignOnResponse extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.zx.member.service.Member.internal_static_member_SignOnResponse_descriptor;
+      return Member.internal_static_member_SignOnResponse_descriptor;
     }
 
-    public com.zx.member.service.SignOnResponse getDefaultInstanceForType() {
-      return com.zx.member.service.SignOnResponse.getDefaultInstance();
+    public SignOnResponse getDefaultInstanceForType() {
+      return SignOnResponse.getDefaultInstance();
     }
 
-    public com.zx.member.service.SignOnResponse build() {
-      com.zx.member.service.SignOnResponse result = buildPartial();
+    public SignOnResponse build() {
+      SignOnResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public com.zx.member.service.SignOnResponse buildPartial() {
-      com.zx.member.service.SignOnResponse result = new com.zx.member.service.SignOnResponse(this);
+    public SignOnResponse buildPartial() {
+      SignOnResponse result = new SignOnResponse(this);
       result.userId_ = userId_;
       onBuilt();
       return result;
@@ -321,16 +321,16 @@ public  final class SignOnResponse extends
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.zx.member.service.SignOnResponse) {
-        return mergeFrom((com.zx.member.service.SignOnResponse)other);
+      if (other instanceof SignOnResponse) {
+        return mergeFrom((SignOnResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.zx.member.service.SignOnResponse other) {
-      if (other == com.zx.member.service.SignOnResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(SignOnResponse other) {
+      if (other == SignOnResponse.getDefaultInstance()) return this;
       if (other.getUserId() != 0) {
         setUserId(other.getUserId());
       }
@@ -346,11 +346,11 @@ public  final class SignOnResponse extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.zx.member.service.SignOnResponse parsedMessage = null;
+      SignOnResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.zx.member.service.SignOnResponse) e.getUnfinishedMessage();
+        parsedMessage = (SignOnResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -400,12 +400,12 @@ public  final class SignOnResponse extends
   }
 
   // @@protoc_insertion_point(class_scope:member.SignOnResponse)
-  private static final com.zx.member.service.SignOnResponse DEFAULT_INSTANCE;
+  private static final SignOnResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.zx.member.service.SignOnResponse();
+    DEFAULT_INSTANCE = new SignOnResponse();
   }
 
-  public static com.zx.member.service.SignOnResponse getDefaultInstance() {
+  public static SignOnResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -423,12 +423,12 @@ public  final class SignOnResponse extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<SignOnResponse> getParserForType() {
     return PARSER;
   }
 
-  public com.zx.member.service.SignOnResponse getDefaultInstanceForType() {
+  public SignOnResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

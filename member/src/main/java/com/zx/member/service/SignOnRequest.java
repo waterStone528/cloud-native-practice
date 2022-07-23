@@ -19,7 +19,7 @@ public  final class SignOnRequest extends
     password_ = "";
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -45,13 +45,13 @@ public  final class SignOnRequest extends
             break;
           }
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             userName_ = s;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             password_ = s;
             break;
@@ -69,29 +69,29 @@ public  final class SignOnRequest extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.zx.member.service.Member.internal_static_member_SignOnRequest_descriptor;
+    return Member.internal_static_member_SignOnRequest_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.zx.member.service.Member.internal_static_member_SignOnRequest_fieldAccessorTable
+    return Member.internal_static_member_SignOnRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.zx.member.service.SignOnRequest.class, com.zx.member.service.SignOnRequest.Builder.class);
+            SignOnRequest.class, Builder.class);
   }
 
   public static final int USERNAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object userName_;
+  private volatile Object userName_;
   /**
    * <code>string userName = 1;</code>
    */
-  public java.lang.String getUserName() {
-    java.lang.Object ref = userName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getUserName() {
+    Object ref = userName_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       userName_ = s;
       return s;
     }
@@ -101,11 +101,11 @@ public  final class SignOnRequest extends
    */
   public com.google.protobuf.ByteString
       getUserNameBytes() {
-    java.lang.Object ref = userName_;
-    if (ref instanceof java.lang.String) {
+    Object ref = userName_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       userName_ = b;
       return b;
     } else {
@@ -114,18 +114,18 @@ public  final class SignOnRequest extends
   }
 
   public static final int PASSWORD_FIELD_NUMBER = 2;
-  private volatile java.lang.Object password_;
+  private volatile Object password_;
   /**
    * <code>string password = 2;</code>
    */
-  public java.lang.String getPassword() {
-    java.lang.Object ref = password_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getPassword() {
+    Object ref = password_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       password_ = s;
       return s;
     }
@@ -135,11 +135,11 @@ public  final class SignOnRequest extends
    */
   public com.google.protobuf.ByteString
       getPasswordBytes() {
-    java.lang.Object ref = password_;
-    if (ref instanceof java.lang.String) {
+    Object ref = password_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       password_ = b;
       return b;
     } else {
@@ -183,15 +183,15 @@ public  final class SignOnRequest extends
   }
 
   private static final long serialVersionUID = 0L;
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.zx.member.service.SignOnRequest)) {
+    if (!(obj instanceof SignOnRequest)) {
       return super.equals(obj);
     }
-    com.zx.member.service.SignOnRequest other = (com.zx.member.service.SignOnRequest) obj;
+    SignOnRequest other = (SignOnRequest) obj;
 
     boolean result = true;
     result = result && getUserName()
@@ -201,7 +201,7 @@ public  final class SignOnRequest extends
     return result;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -217,69 +217,69 @@ public  final class SignOnRequest extends
     return hash;
   }
 
-  public static com.zx.member.service.SignOnRequest parseFrom(
+  public static SignOnRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(
+  public static SignOnRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(
+  public static SignOnRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(
+  public static SignOnRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(byte[] data)
+  public static SignOnRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(
+  public static SignOnRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(java.io.InputStream input)
+  public static SignOnRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(
+  public static SignOnRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnRequest parseDelimitedFrom(java.io.InputStream input)
+  public static SignOnRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.zx.member.service.SignOnRequest parseDelimitedFrom(
+  public static SignOnRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(
+  public static SignOnRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.zx.member.service.SignOnRequest parseFrom(
+  public static SignOnRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -291,7 +291,7 @@ public  final class SignOnRequest extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.zx.member.service.SignOnRequest prototype) {
+  public static Builder newBuilder(SignOnRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -299,7 +299,7 @@ public  final class SignOnRequest extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
       com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
@@ -311,17 +311,17 @@ public  final class SignOnRequest extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:member.SignOnRequest)
-      com.zx.member.service.SignOnRequestOrBuilder {
+      SignOnRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zx.member.service.Member.internal_static_member_SignOnRequest_descriptor;
+      return Member.internal_static_member_SignOnRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zx.member.service.Member.internal_static_member_SignOnRequest_fieldAccessorTable
+      return Member.internal_static_member_SignOnRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.zx.member.service.SignOnRequest.class, com.zx.member.service.SignOnRequest.Builder.class);
+              SignOnRequest.class, Builder.class);
     }
 
     // Construct using com.zx.member.service.SignOnRequest.newBuilder()
@@ -350,23 +350,23 @@ public  final class SignOnRequest extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.zx.member.service.Member.internal_static_member_SignOnRequest_descriptor;
+      return Member.internal_static_member_SignOnRequest_descriptor;
     }
 
-    public com.zx.member.service.SignOnRequest getDefaultInstanceForType() {
-      return com.zx.member.service.SignOnRequest.getDefaultInstance();
+    public SignOnRequest getDefaultInstanceForType() {
+      return SignOnRequest.getDefaultInstance();
     }
 
-    public com.zx.member.service.SignOnRequest build() {
-      com.zx.member.service.SignOnRequest result = buildPartial();
+    public SignOnRequest build() {
+      SignOnRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public com.zx.member.service.SignOnRequest buildPartial() {
-      com.zx.member.service.SignOnRequest result = new com.zx.member.service.SignOnRequest(this);
+    public SignOnRequest buildPartial() {
+      SignOnRequest result = new SignOnRequest(this);
       result.userName_ = userName_;
       result.password_ = password_;
       onBuilt();
@@ -400,16 +400,16 @@ public  final class SignOnRequest extends
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.zx.member.service.SignOnRequest) {
-        return mergeFrom((com.zx.member.service.SignOnRequest)other);
+      if (other instanceof SignOnRequest) {
+        return mergeFrom((SignOnRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.zx.member.service.SignOnRequest other) {
-      if (other == com.zx.member.service.SignOnRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(SignOnRequest other) {
+      if (other == SignOnRequest.getDefaultInstance()) return this;
       if (!other.getUserName().isEmpty()) {
         userName_ = other.userName_;
         onChanged();
@@ -430,11 +430,11 @@ public  final class SignOnRequest extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.zx.member.service.SignOnRequest parsedMessage = null;
+      SignOnRequest parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.zx.member.service.SignOnRequest) e.getUnfinishedMessage();
+        parsedMessage = (SignOnRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -444,20 +444,20 @@ public  final class SignOnRequest extends
       return this;
     }
 
-    private java.lang.Object userName_ = "";
+    private Object userName_ = "";
     /**
      * <code>string userName = 1;</code>
      */
-    public java.lang.String getUserName() {
-      java.lang.Object ref = userName_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getUserName() {
+      Object ref = userName_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         userName_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -465,11 +465,11 @@ public  final class SignOnRequest extends
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
-      java.lang.Object ref = userName_;
+      Object ref = userName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         userName_ = b;
         return b;
       } else {
@@ -480,7 +480,7 @@ public  final class SignOnRequest extends
      * <code>string userName = 1;</code>
      */
     public Builder setUserName(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -513,20 +513,20 @@ public  final class SignOnRequest extends
       return this;
     }
 
-    private java.lang.Object password_ = "";
+    private Object password_ = "";
     /**
      * <code>string password = 2;</code>
      */
-    public java.lang.String getPassword() {
-      java.lang.Object ref = password_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getPassword() {
+      Object ref = password_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         password_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -534,11 +534,11 @@ public  final class SignOnRequest extends
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      java.lang.Object ref = password_;
+      Object ref = password_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         password_ = b;
         return b;
       } else {
@@ -549,7 +549,7 @@ public  final class SignOnRequest extends
      * <code>string password = 2;</code>
      */
     public Builder setPassword(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -596,12 +596,12 @@ public  final class SignOnRequest extends
   }
 
   // @@protoc_insertion_point(class_scope:member.SignOnRequest)
-  private static final com.zx.member.service.SignOnRequest DEFAULT_INSTANCE;
+  private static final SignOnRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.zx.member.service.SignOnRequest();
+    DEFAULT_INSTANCE = new SignOnRequest();
   }
 
-  public static com.zx.member.service.SignOnRequest getDefaultInstance() {
+  public static SignOnRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -619,12 +619,12 @@ public  final class SignOnRequest extends
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<SignOnRequest> getParserForType() {
     return PARSER;
   }
 
-  public com.zx.member.service.SignOnRequest getDefaultInstanceForType() {
+  public SignOnRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

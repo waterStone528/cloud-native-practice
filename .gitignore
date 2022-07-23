@@ -1,0 +1,9 @@
+.idea
+app/app.iml
+app/target/*
+grpc-proto/grpc-proto.iml
+grpc-proto/target/*
+member/member.iml
+member/target/*
+./cloud-native-practice.iml
+cloud-native-practice.iml

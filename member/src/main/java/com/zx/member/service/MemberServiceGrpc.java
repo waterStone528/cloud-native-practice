@@ -1,19 +1,11 @@
 package com.zx.member.service;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
  */
@@ -28,16 +20,16 @@ public final class MemberServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.zx.member.service.SignOnRequest,
-      com.zx.member.service.SignOnResponse> METHOD_SIGN_ON =
-      io.grpc.MethodDescriptor.<com.zx.member.service.SignOnRequest, com.zx.member.service.SignOnResponse>newBuilder()
+  public static final io.grpc.MethodDescriptor<SignOnRequest,
+      SignOnResponse> METHOD_SIGN_ON =
+      io.grpc.MethodDescriptor.<SignOnRequest, SignOnResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "member.MemberService", "SignOn"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.zx.member.service.SignOnRequest.getDefaultInstance()))
+              SignOnRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.zx.member.service.SignOnResponse.getDefaultInstance()))
+              SignOnResponse.getDefaultInstance()))
           .build();
 
   /**
@@ -69,19 +61,19 @@ public final class MemberServiceGrpc {
 
     /**
      */
-    public void signOn(com.zx.member.service.SignOnRequest request,
-        io.grpc.stub.StreamObserver<com.zx.member.service.SignOnResponse> responseObserver) {
+    public void signOn(SignOnRequest request,
+                       io.grpc.stub.StreamObserver<SignOnResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_SIGN_ON, responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+    @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             METHOD_SIGN_ON,
             asyncUnaryCall(
               new MethodHandlers<
-                com.zx.member.service.SignOnRequest,
-                com.zx.member.service.SignOnResponse>(
+                SignOnRequest,
+                SignOnResponse>(
                   this, METHODID_SIGN_ON)))
           .build();
     }
@@ -99,7 +91,7 @@ public final class MemberServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected MemberServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new MemberServiceStub(channel, callOptions);
@@ -107,8 +99,8 @@ public final class MemberServiceGrpc {
 
     /**
      */
-    public void signOn(com.zx.member.service.SignOnRequest request,
-        io.grpc.stub.StreamObserver<com.zx.member.service.SignOnResponse> responseObserver) {
+    public void signOn(SignOnRequest request,
+                       io.grpc.stub.StreamObserver<SignOnResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_SIGN_ON, getCallOptions()), request, responseObserver);
     }
@@ -126,7 +118,7 @@ public final class MemberServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected MemberServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new MemberServiceBlockingStub(channel, callOptions);
@@ -134,7 +126,7 @@ public final class MemberServiceGrpc {
 
     /**
      */
-    public com.zx.member.service.SignOnResponse signOn(com.zx.member.service.SignOnRequest request) {
+    public SignOnResponse signOn(SignOnRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_SIGN_ON, getCallOptions(), request);
     }
@@ -152,7 +144,7 @@ public final class MemberServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected MemberServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new MemberServiceFutureStub(channel, callOptions);
@@ -160,8 +152,8 @@ public final class MemberServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.zx.member.service.SignOnResponse> signOn(
-        com.zx.member.service.SignOnRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<SignOnResponse> signOn(
+        SignOnRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_SIGN_ON, getCallOptions()), request);
     }
@@ -182,21 +174,21 @@ public final class MemberServiceGrpc {
       this.methodId = methodId;
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SIGN_ON:
-          serviceImpl.signOn((com.zx.member.service.SignOnRequest) request,
-              (io.grpc.stub.StreamObserver<com.zx.member.service.SignOnResponse>) responseObserver);
+          serviceImpl.signOn((SignOnRequest) request,
+              (io.grpc.stub.StreamObserver<SignOnResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -207,9 +199,9 @@ public final class MemberServiceGrpc {
   }
 
   private static final class MemberServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.zx.member.service.Member.getDescriptor();
+      return Member.getDescriptor();
     }
   }
 

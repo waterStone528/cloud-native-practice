@@ -32,7 +32,7 @@ public final class Member {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\014member.proto\022\006member\"3\n\rSignOnRequest\022" +
       "\020\n\010userName\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\" \n\016S" +
       "ignOnResponse\022\016\n\006userId\030\001 \001(\r2H\n\rMemberS" +
@@ -57,13 +57,13 @@ public final class Member {
     internal_static_member_SignOnRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_member_SignOnRequest_descriptor,
-        new java.lang.String[] { "UserName", "Password", });
+        new String[] { "UserName", "Password", });
     internal_static_member_SignOnResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_member_SignOnResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_member_SignOnResponse_descriptor,
-        new java.lang.String[] { "UserId", });
+        new String[] { "UserId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

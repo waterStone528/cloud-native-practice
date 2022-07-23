@@ -10,7 +10,7 @@ public interface SignOnRequestOrBuilder extends
   /**
    * <code>string userName = 1;</code>
    */
-  java.lang.String getUserName();
+  String getUserName();
   /**
    * <code>string userName = 1;</code>
    */
@@ -20,7 +20,7 @@ public interface SignOnRequestOrBuilder extends
   /**
    * <code>string password = 2;</code>
    */
-  java.lang.String getPassword();
+  String getPassword();
   /**
    * <code>string password = 2;</code>
    */
