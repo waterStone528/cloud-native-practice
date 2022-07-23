@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package member;
+
+option java_multiple_files = true;
+option java_package = "com.zx.member.service";
+
+service MemberService{
+  rpc SignOn(SignOnRequest) returns (SignOnResponse);
+}
+
+message SignOnRequest {
+  string userName = 1;
+  string password = 2;
+}
+
+message SignOnResponse {
+  uint32 userId = 1;
+}
