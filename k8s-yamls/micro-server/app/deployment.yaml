@@ -21,7 +21,7 @@ spec:
       containers:
       - name: app
         image: registry.cn-hangzhou.aliyuncs.com/k8s_water/app:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         resources:
           limits:
             cpu: "0.2"
