@@ -28,19 +28,19 @@ spec:
             memory: "1000Mi"
         ports:
         - containerPort: 9010
-#        livenessProbe:
-#          initialDelaySeconds: 30
-#          httpGet:
-#            path: /actuator/health/liveness
-#            port: 9010
-#          periodSeconds: 10
-#          failureThreshold: 1
-#        readinessProbe:
-#          initialDelaySeconds: 30
-#          httpGet:
-#            path: /actuator/health/readiness
-#            port: 9010
-#          periodSeconds: 10
-#          failureThreshold: 1
+        livenessProbe:
+          initialDelaySeconds: 30
+          httpGet:
+            path: /actuator/health/liveness
+            port: 9010
+          periodSeconds: 10
+          failureThreshold: 1
+        readinessProbe:
+          initialDelaySeconds: 30
+          httpGet:
+            path: /actuator/health/readiness
+            port: 9010
+          periodSeconds: 10
+          failureThreshold: 1
       imagePullSecrets:
         - name: docker-regcred

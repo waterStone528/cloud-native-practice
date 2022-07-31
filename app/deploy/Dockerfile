@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:jre-11.0.14.1_1-ubuntu
+FROM adoptopenjdk/openjdk11:x86_64-ubuntu-jre-11.0.15_10
 RUN mkdir /opt/app
 EXPOSE 9010
 COPY ./app-1.0-SNAPSHOT.jar /opt/app/app.jar
